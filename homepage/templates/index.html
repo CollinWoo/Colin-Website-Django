@@ -1,0 +1,41 @@
+{% extends "generic.html" %}
+
+{% block header %}
+{% load static %}
+<header style="background-image:url({% static 'somthing.jpeg' %});">Colin Wu's Homepage<div id = "slogan">CS Major at Cornell University</div></header>
+{% endblock %}
+
+{% block content %}
+<section>
+{% for card in card_list %}
+
+<article class="responsiveimg">
+    <div class="gallery">
+      <a target = "_blank" href="{{ card.link }}">
+          {% if card.is_img %}
+            <img src="{{ card.media.url }}">
+          {% elif card.media %}
+            <video playsinline autoplay muted loop src="{{ card.media.url }}"></video>
+          {% endif %}
+
+          {% if card.show_caption %}
+            <div class = "imgcaption">{{ card.img_caption }}</div>
+          {% endif %}
+        </a>
+      <div class="desc">{{ card.description }}</div>
+    </div>
+  </article>
+
+{% endfor %}
+<div class="clearfix"></div>
+</section>
+
+<section>
+    <img src= "{% static 'pfp.jpg' %}" class="pfp">
+    <h1>About Me</h1>
+    <p>Hey! My name is Colin. I'm a freshman CS major at Cornell University with a passion for web development and software engineering.
+    I wrote all the HTML, CSS, and Javascript for this webpage (I am unsure about the rest of this website since I haven't actually made it yet), so view my incredibly messy source "code" at your own discretion. If you would like to contact me, my email is available through the contact tab in the nav bar.
+    </p>
+    <div class="clearfix"></div>
+  </section>
+{% endblock %}

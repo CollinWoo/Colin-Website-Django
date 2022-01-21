@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <base target="" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="author" content="Colin Wu">
+  <title>{% block title %}Colinweb - Colin Wu's Homepage{% endblock %}</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  {% load static %}
+  <link rel="stylesheet" type = "text/css" href="{% static 'css/colinweb.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Vesper+Libre|Staatliches|Righteous|Cinzel|Tauri|Major+Mono+Display|Roboto+Condensed|Audiowide|Pattaya|Quicksand|Bebas+Neue" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link rel="icon" href="{% static 'Favicons/favicon.ico' %}" sizes="any">
+  <link rel="icon" href="{% static 'Favicons/favicon.svg' %}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{% static 'Favicons/apple-touch-icon.png' %}">
+  <link rel="manifest" href="{% static 'Favicons/site.webmanifest' %}">
+
+  <script src="{%static 'Javascript/colinjavascript.js' %}"></script>
+</head>
+<body>
+{% block header %}{% endblock %}
+
+<!--WARNING: HUGE MESS UP AHEAD-->
+<nav id="myTopnav">
+<a id = "logo" title="">Colinweb<sup style="font-size:10px;">V2</sup></a>
+<a href="{% url 'index' %}"><i class="fa fa-home"></i>Home</a>
+<a href=""><i class="fas fa-bolt"></i>Projects</a>
+<a href=""><i class="far fa-newspaper"></i>Blog</a>
+<a href=""><i class="fas fa-address-card"></i>Résumé</a>
+<a title="please I'm broke" style="/*cursor:not-allowed*/" href=https://www.buymeacoffee.com/colinwu target="_blank"><i class="fas fa-donate"></i>Donate<span class = "hiddentext"> all your money</span></a>
+<a class="rightTab" href="mailto:collinwu01@gmail.com"><i class="fas fa-envelope"></i>Contact</a>
+<div class="dropdown rightTab">
+  <button class="dropbtn" href=""><i class="fas fa-desktop"></i>Antisocial<i class="fas fa-caret-down"></i></button>
+	<div class="dropdown-content">
+	  <a href="https://www.facebook.com/colin.wu.9256/" target="_blank"><i class="fab fa-facebook-square"></i>Fakesbook</a>
+		<a href="https://twitter.com/maozedong?lang=en" target="_blank"><i class="fab fa-twitter"></i>Tweeter</a>
+    <a href="https://www.instagram.com/colllin_woo/" target="_blank"><i class="fab fa-instagram"></i>Instelegram</a>
+	</div>
+</div>
+<a class="rightTab" href="https://github.com/10aDing" target="_blank"><i class="fab fa-github"></i>Grubhub</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	<div class = "line1"></div>
+	<div class = "line2"></div>
+	<div class = "line3"></div>
+</a>
+</nav>
+
+{% block content %} <!-- Insert page content here --> {% endblock %}
+
+<footer>
+  &copy; 1453-2022 Colin Wu Conglomerate Corporation Coalition Company Co.
+  <br>All Wrongs Reserved<br>
+  <br><font style = "size:30px;font-family:'Quicksand';">Proudly made without <i class="fab fa-squarespace"></i>DODECAHEDRONSPACE
+  <div style = "font-size:10px">(jk i coded this)</div>
+  </font>
+</footer>
+</body>
+</html>
