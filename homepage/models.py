@@ -60,8 +60,9 @@ class ProjectCard(models.Model):
 
 class DescriptionPage(models.Model):
     title = models.CharField(max_length=500)
-    slug = models.CharField(unique=True,max_length=500)
+    slug = models.CharField(unique=True,max_length=500, primary_key = True)
     content = MDTextField()
-    
 
+    def __str__(self):
+        return self.slug
     
