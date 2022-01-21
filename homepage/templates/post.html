@@ -1,0 +1,13 @@
+{% extends "generic.html" %}
+
+{% block header %}
+{% load static %}
+<header style="background-image:url({% static 'somthing.jpeg' %});">Colin Wu's Homepage<div id = "slogan">CS Major at Cornell University</div></header>
+{% endblock %}
+
+{% block content %}
+<section>
+    <h1>{{card.title}}</h1>
+    {% autoescape off %}{{text}}{% endautoescape %}
+</section>
+{% endblock %}
