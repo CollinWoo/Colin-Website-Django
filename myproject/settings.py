@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-h4ssw4tr9=cj3##*ul-+-1))$t$jnfqrje%yjpr458$2p&+70h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['colinwu.rocks','0.0.0.0']
 
 
 # Application definition
@@ -127,6 +127,7 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN' 
+CSRF_TRUSTED_ORIGINS = ['https://*.colinwu.rocks','https://*.127.0.0.1']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
