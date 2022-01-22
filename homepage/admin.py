@@ -18,7 +18,7 @@ class ProjectCardAdmin(SortableAdminMixin, admin.ModelAdmin):
             'fields': ('img_caption', 'show_caption')
         }),
         ('Background', {
-            'fields': ('media', ('extension', 'is_img'))
+            'fields': ('media', 'extension')
         }),
         ('Other', {
             'fields': ('description', 'link')
