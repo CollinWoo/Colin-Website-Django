@@ -11,7 +11,7 @@
 
 <article class="responsiveimg">
     <div class="gallery">
-      <a target = "_blank" href="{{ card.link }}">
+      <a href="{{ card.link }}">
           {% if card.is_img %}
             <img src="{{ card.media.url }}">
           {% elif card.media %}
@@ -34,7 +34,7 @@
     <img src= "{% static 'pfp.jpg' %}" class="pfp">
     <h1>About Me</h1>
     <p>Hey! My name is Colin. I'm a freshman CS major at Cornell University with a passion for web development and software engineering.
-    I wrote all the HTML, CSS, and Javascript for this webpage (I am unsure about the rest of this website since I haven't actually made it yet), so view my incredibly messy source "code" at your own discretion. If you would like to contact me, my email is available through the contact tab in the nav bar.
+    I wrote all the HTML, CSS, and Javascript for this webpage as well as the Django backend, so view my incredibly messy source "code" at your own risk. If you would like to contact me, my email is available through the contact tab in the nav bar.
     </p>
     <div class="clearfix"></div>
   </section>

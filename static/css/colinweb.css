@@ -78,7 +78,7 @@ header.large{
 
 /* Navigation Bar */
 nav{
-	width:100vw;
+	width:100%;
 	position:sticky;
 	top: -1px;
 	background-color:#333;
@@ -298,7 +298,7 @@ section:first-of-type{
 }
 
 section{
-	padding: 35px 9.5%;
+	padding: 35px 10.5%;
 	font-family: Quicksand;
 	font-size: 20px;
 	max-width: 1650px;
